@@ -140,3 +140,24 @@ document.getElementById("noButton").addEventListener("mouseover", function() {
   noButton.style.left = randomX + "px";
   noButton.style.top = randomY + "px";
 });
+document.getElementById("noButton").addEventListener("touchstart", function() {
+  // Obtiene las dimensiones del botón
+  const buttonWidth = noButton.offsetWidth;
+  const buttonHeight = noButton.offsetHeight;
+  
+  // Calcula el área máxima en la que se puede mover el botón
+  const maxX = window.innerWidth - buttonWidth;
+  const maxY = window.innerHeight - buttonHeight;
+  
+  // Genera posiciones aleatorias dentro de esos límites
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
+  
+  // Usa position fixed para que sea relativo a la ventana
+  noButton.style.position = "fixed";
+  noButton.style.left = randomX + "px";
+  noButton.style.top = randomY + "px";
+});
+
+
+    
