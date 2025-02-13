@@ -1,0 +1,87 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.valentine-container {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+}
+
+.valentine-gif {
+  width: 150px; /* Ajusta el tamaño del GIF */
+  height: auto;
+}
+
+h1 {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 40px;
+  color: #c70012;
+  padding: 10px 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* centra los botones horizontalmente */
+  gap: 10px;            /* agrega espacio entre ellos */
+  margin-top: 20px;     /* separa los botones del título */
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #c70012;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+  /* Se elimina position: fixed para mantenerlos en el flujo del contenedor */
+}
+
+#noButton {
+  background-color: #58eb77;
+  color: white;
+  width: 100px;
+  height: 40px; /* Tamaño fijo */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  /* Inicialmente no establecemos posición para que JS la asigne */
+}
+
+#yesButton {
+  background-color: #ff69b4;
+  width: 100px;
+  padding: 10px;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 50px;
+  }
+  .valentine-gif {
+    width: 200px; /* GIF más grande en pantallas grandes */
+  }
+}
+
+/* Media Query para móviles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+  .buttons {
+    display: flex;
+  }
+  /* Si necesitas ajustes adicionales para móviles, puedes agregarlos aquí */
+}
